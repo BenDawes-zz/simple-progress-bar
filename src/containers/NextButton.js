@@ -3,8 +3,6 @@ import { connect } from 'react-redux'
 import { incrementProgress } from '../actions'
 
 let NextButton = ({ dispatch }) => {
-  let input
-
   return (
     <div style={{display: "inline-block"}}>
       <form

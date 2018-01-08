@@ -10,14 +10,14 @@ class ProgressBar extends Component {
 
       if(index < this.props.progressIndex) {
         status = "complete"
-      } else if(index == this.props.progressIndex) {
+      } else if(index === this.props.progressIndex) {
         status = "active"
       }
 
       let link = <div className="link"/>
 
       return (
-        <div className={'step ' + status}>
+        <div className={'step ' + status} key={index}>
           <div className="dot" onClick={(e) => { e.preventDefault(); this.props.onStepClick(index);}}>
             <div className="label">
               <p>{stepText}</p>

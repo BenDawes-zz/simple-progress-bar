@@ -1,6 +1,5 @@
-import React from 'react'
 import { connect } from 'react-redux'
-import { incrementProgress, setProgress } from '../actions'
+import { setProgress } from '../actions'
 import ProgressBar from '../components/ProgressBar'
 
 const mapStateToProps = (state, ownProps) => {
