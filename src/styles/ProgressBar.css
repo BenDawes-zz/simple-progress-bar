@@ -1,0 +1,87 @@
+body {
+	text-align: center;
+}
+
+.progress-bar-demo {
+	padding-top: 200px;
+	margin: 0 auto;
+	display: inline-block;
+}
+
+.progress-bar-container {
+	display: flex;
+	flex-direction: row;
+	padding-bottom: 20px;
+}
+
+.step {
+	text-align: center;
+	display: flex;
+}
+
+.dot {
+	border-width: 7px;
+	border-style: solid;
+}
+
+.active, .complete {
+	color: rgb(81,49,215);
+}
+.active.step .dot, .complete.step .dot {
+	border-color: rgb(81,49,215);
+}
+.active.step .dot {
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: transform 0.2s;
+	-webkit-transform: scale(1.2);
+	transform: scale(1.2);
+	z-index: 1;
+}
+.complete .link{
+	background-color: rgb(81,49,215);
+	z-index: 0;
+}
+.inactive {
+	color: rgb(219,219,219);
+}
+.inactive.step .dot {
+	border-color: rgb(219,219,219);
+}
+.inactive .link, .active .link {
+	background-color: rgb(219,219,219);
+}
+
+.step .label {
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: transform 0.2s;
+	position: relative;
+	margin-left: 50%;
+	top: -45px;
+	text-align:center;
+	display: inline-block;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	cursor: pointer;
+}
+.step .dot {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.step:hover .label {
+	-webkit-transform: translateX(-50%) scale(1.2);
+	transform: translateX(-50%) scale(1.2);
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: transform 0.2s;
+}
+
+.link {
+	display: inline-block;
+	position: relative;
+	width: 100px; // TODO: Compute as prop;
+	height: 6px;
+	top: calc(50% - 3px);
+}
