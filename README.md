@@ -9,3 +9,4 @@ Supports basic features:
 * Dynamic in step size
 * Simple animations
 * Clickable steps (easily disabled)
+* Simple test with `npm test`
